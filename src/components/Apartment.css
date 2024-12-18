@@ -1,0 +1,18 @@
+.apartment__card {
+    background: linear-gradient(to bottom, #ff6060, #bb3d3d);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    height: 340px;
+}
+
+.apartment__card h3 {
+    padding: 20px;
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    width: 50%;
+    line-height: 26px;
+}
