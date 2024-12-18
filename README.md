@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # OpenClassrooms_Projet-7
 =======
 # React + Vite
