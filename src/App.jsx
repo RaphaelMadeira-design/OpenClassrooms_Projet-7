@@ -1,21 +1,20 @@
-import React from 'react'
-import Wrapper from './components/Wrapper'
-import Navbar from './components/Navbar'
-import Banner from './components/Banner'
-import ApartmentList from './components/ApartmentList'
-import Footer from './components/Footer'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Rental from "./pages/Rental";
+import Error from "./pages/Error";
 
 function App() {
+
   return (
-    <div>
-      <Wrapper>
-        <Navbar />
-        <Banner />
-        <ApartmentList />
-      </Wrapper>
-        <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path="/a-propos" element={<About />} />
+        <Route path="/location/:logementId" element={<Rental />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
