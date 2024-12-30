@@ -1,11 +1,24 @@
 import React from 'react'
-import './Banner.css'
+import '../Css/style.css'
 
-function Banner() {
-  return (
-    <div className='banner'>
-        <h1 className='h1__back'>Chez vous, partout et ailleurs</h1>
-        <h1 className='h1__front'>Chez vous, partout et ailleurs</h1>
+function Banner(props) {
+
+  const bannerStyle = {
+    backgroundImage: `url(${props.backgroundImage})`,
+  }
+
+   return (
+    <div className="banner" style={bannerStyle}>
+      {props.showText && (
+        <>
+          <h1 className="h1__back">
+            {props.text ? props.text : 'Chez vous, partout et ailleurs'}
+          </h1>
+          <h1 className="h1__front">
+            {props.text ? props.text : 'Chez vous, partout et ailleurs'}
+          </h1>
+        </>
+      )}
     </div>
   )
 }

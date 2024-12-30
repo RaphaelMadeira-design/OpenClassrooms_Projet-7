@@ -1,19 +1,16 @@
-import Wrapper from '../components/Wrapper/Wrapper'
-import Navbar from '../components/Navbar/Navbar'
 import Banner from '../components/Banner/Banner'
 import ApartmentList from '../components/ApartmentList/ApartmentList'
-import Footer from '../components/Footer/Footer'
-import '../components/Reset/Reset.css'
+import '../components/Css/style.css'
+import bgImage from '../assets/bg1.jpg'
 
 function Home() {
   return (
     <>
-      <Wrapper>
-        <Navbar />
-        <Banner />
-        <ApartmentList />
-      </Wrapper>
-        <Footer />
+      <Banner 
+        backgroundImage={bgImage} 
+        showText={true} 
+      />
+      <ApartmentList />
     </>
   )
 }

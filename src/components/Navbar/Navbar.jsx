@@ -1,5 +1,6 @@
 import React from 'react'
-import './Navbar.css'
+import { NavLink } from 'react-router'
+import '../Css/style.css'
 
 function Navbar() {
   return (
@@ -8,8 +9,8 @@ function Navbar() {
         <img src="./src/assets/logo.svg" alt="Logo Kasa"/>
       </div>
       <ul className='nav__menu'>
-        <li>Accueil</li>
-        <li>A propos</li>
+        <li><NavLink to="/">Accueil</NavLink></li>
+        <li><NavLink to="/a-propos">A propos</NavLink></li>
       </ul>
     </nav>
   )

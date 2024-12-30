@@ -1,10 +1,11 @@
 import React from 'react'
-import './Apartment.css'
+import '../Css/style.css'
 
-function Apartment() {
+function Apartment({ apartment, onClick }) {
   return (
-    <div className='apartment__card'>
-        <h3>Titre de la location</h3>
+    <div className='apartment__card' onClick={onClick}>
+      <img src={apartment.cover} alt={apartment.title} />
+      <h3>{apartment.title}</h3>
     </div>
   )
 }

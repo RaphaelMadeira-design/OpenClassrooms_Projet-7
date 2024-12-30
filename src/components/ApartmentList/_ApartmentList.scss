@@ -1,0 +1,18 @@
+.apartment__grid {
+    display: grid;
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    padding: 55px 50px;
+    gap: 50px 60px;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      padding: 0;
+      gap: 20px;
+    }
+  }
