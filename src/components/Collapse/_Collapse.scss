@@ -14,7 +14,6 @@
     border-radius: 5px;
     overflow: hidden;
     background-color: #f6f6f6;
-
     &-header {
         display: flex;
         justify-content: space-between;
@@ -46,7 +45,6 @@
             }
         }
     }
-
     &-content {
         height: 0;
         overflow: hidden;
