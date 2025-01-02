@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path="/a-propos" element={<About />} />
-          <Route path="/rental/:rentalId" element={<Rental />} /> {/* Assurez-vous que le chemin ici est cohérent avec celui utilisé dans Home.jsx */}
+          <Route path="/logement/:rentalId" element={<Rental />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </Wrapper>

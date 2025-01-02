@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router'
 function ApartmentList() {
   const navigate = useNavigate()
   const handleCardClick = (id) => {
-    navigate(`/rental/${id}`)
+    navigate(`/logement/${id}`)
   }
 
   return (
