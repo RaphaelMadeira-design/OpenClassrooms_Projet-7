@@ -5,7 +5,7 @@ function Carousel({ pictures, title }) {
   const [currentImgIndex, setImgIndex] = useState(0)
 
   const handleNext = () => {
-    setImgIndex(function(imgIndex) {
+    setImgIndex((imgIndex) => {
       if (imgIndex === pictures.length - 1) {
         return 0
       } else {
@@ -15,7 +15,7 @@ function Carousel({ pictures, title }) {
   }
 
   const handlePrevious = () => {
-    setImgIndex(function(imgIndex) {
+    setImgIndex((imgIndex) => {
       if (imgIndex === 0) {
         return pictures.length - 1
       } else {
@@ -26,23 +26,25 @@ function Carousel({ pictures, title }) {
 
   return (
     <div className="carousel">
-      {/* Bouton précédent */}
-      <div onClick={handlePrevious} className="carousel__button carousel__button--prev">
-        <i className="fa-solid fa-chevron-left"></i>
-      </div>
+      {pictures.length > 1 && (
+        <div onClick={handlePrevious} className="carousel__button carousel__button--prev">
+          <i className="fa-solid fa-chevron-left"></i>
+        </div>
+      )}
 
-      {/* Image affichée */}
       <img src={pictures[currentImgIndex]} alt={`${title} - image ${currentImgIndex + 1}`} className="carousel__image"/>
 
-      {/* Bouton suivant */}
-      <div onClick={handleNext} className="carousel__button carousel__button--next">
-        <i className="fa-solid fa-chevron-right"></i>
-      </div>
+      {pictures.length > 1 && (
+        <div onClick={handleNext} className="carousel__button carousel__button--next">
+          <i className="fa-solid fa-chevron-right"></i>
+        </div>
+      )}
 
-      {/* Indicateur de position */}
-      <div className="carousel__indicator">
-        {currentImgIndex + 1} / {pictures.length}
-      </div>
+      {pictures.length > 1 && (
+        <div className="carousel__indicator">
+          {currentImgIndex + 1} / {pictures.length}
+        </div>
+      )}
     </div>
   )
 }
