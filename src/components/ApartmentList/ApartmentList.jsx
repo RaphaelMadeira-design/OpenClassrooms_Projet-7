@@ -9,15 +9,12 @@ function ApartmentList() {
   const handleCardClick = (id) => {
     navigate(`/rental/${id}`)
   }
-  
+
   return (
     <div className='apartment__grid'>
       {apartements.map((apartment) => (
-        <Apartment 
-          key={apartment.id} 
-          apartment={apartment} 
-          onClick={() => handleCardClick(apartment.id)} 
-        />
+        <Apartment key={apartment.id} apartment={apartment} 
+          onClick={() => handleCardClick(apartment.id)} />
       ))}
     </div>
   )
