@@ -9,6 +9,7 @@ function ApartmentList() {
   const handleCardClick = (id) => {
     navigate(`/rental/${id}`)
   }
+  
   return (
     <div className='apartment__grid'>
       {apartements.map((apartment) => (
