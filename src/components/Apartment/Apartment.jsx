@@ -1,12 +1,13 @@
 import React from 'react'
 import '../Css/style.css'
+import { Link } from 'react-router'
 
-function Apartment({ apartment, onClick }) {
+function Apartment({ apartment }) {
   return (
-    <div className='apartment__card' onClick={onClick}>
+    <Link className='apartment__card' to={"/logement/" + apartment.id}>
       <img src={apartment.cover} alt={apartment.title} />
       <h3>{apartment.title}</h3>
-    </div>
+    </Link>
   )
 }
 

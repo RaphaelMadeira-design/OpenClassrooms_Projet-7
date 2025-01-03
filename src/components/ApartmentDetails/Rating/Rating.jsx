@@ -14,7 +14,6 @@ function Rating({ rating }) {
 
   return (
     <div className="rating">
-        {/* Afficher les étoiles */}
         {stars.map((color, index) => (
             <i key={index} className={`fa-solid fa-star ${color}-star`}></i>
         ))}

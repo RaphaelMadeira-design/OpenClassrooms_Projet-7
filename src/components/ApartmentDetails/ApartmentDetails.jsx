@@ -1,31 +1,25 @@
-import React, { useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router'
+import React from 'react'
+import { useParams } from 'react-router'
 import '../../components/Css/style.css'
 import apartments from '../../data/logements.json'
-import Carousel from '../../components/ApartmentDetails/Carousel/Carousel'
-import Collapse from '../../components/Collapse/Collapse'
-import Host from '../../components/ApartmentDetails/Host/Host'
-import Tags from '../../components/ApartmentDetails/Tags/Tags'
-import Rating from '../../components/ApartmentDetails/Rating/Rating'
+import Carousel from './Carousel/Carousel'
+import Collapse from '.././Collapse/Collapse'
+import Host from './Host/Host'
+import Tags from './Tags/Tags'
+import Rating from './Rating/Rating'
+import Error from '../../pages/Error'
 
 function ApartmentDetails() {
     const { rentalId } = useParams()
-    const navigate = useNavigate()
     const apartment = apartments.find((apt) => apt.id === rentalId)
 
-    useEffect(() => {
-        if (!apartment) {
-            navigate('/*')
-        }
-    }, [apartment, navigate])
-
     if (!apartment) {
-        return null
+        return <Error/>
     }
 
     return (
         <div className="details-container">
-            <Carousel pictures={apartment.pictures} title={apartment.title}/>
+            <Carousel pictures={apartment.pictures}/>
             <div className='apartmentDetails'>
                 <div className='apartmentDetails__NameLocationTags'>
                     <h2>{apartment.title}</h2>
