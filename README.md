@@ -1,10 +1,11 @@
-# OpenClassrooms_Projet-7
+# OpenClassrooms - Formation Intégrateur Web : Projet 7
 
-# React + Vite
+## Créez une application web de location immobilière avec React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Objectifs pédagogiques**
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Initialiser une application avec Create React App
+- Configurer la navigation entre les pages de l'application avec React Router
+- Développer des éléments de l'interface d'un site web grâce à des composants React
+- Mettre en œuvre des animations CSS
+- Développer une interface web avec Sass
