@@ -37,7 +37,9 @@ function ApartmentDetails() {
                 </Collapse>
                 <Collapse title="Équipements">
                     {apartment.equipments.map((equip, index) => (
-                        <li key={index}>{equip}</li>
+                        <li key={index}>
+                            {equip}
+                        </li>
                     ))}
                 </Collapse>
             </div>
